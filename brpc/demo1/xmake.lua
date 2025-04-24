@@ -2,7 +2,7 @@ add_rules("mode.debug", "mode.release")
 add_rules("plugin.compile_commands.autoupdate", {outputdir = ".", lsp = "clangd"})
 
 add_requires("brpc 1.10.0", {debug = is_mode("debug"), configs = {enable_glog = true}})
-add_requires("protobuf-cpp 3.19.4")
+add_requires("protobuf-cpp 3.15.8")
 
 
 target("proto_gen")

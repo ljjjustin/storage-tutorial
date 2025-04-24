@@ -36,6 +36,8 @@ int main() {
         ctrl.set_log_id(log_id++);
 
         demo1::EchoResponse response;
+        // 同步调用，阻塞直到获得结果或超时
+        // done 设置为 NULL，表示没有回调函数
         stub.Echo(&ctrl, &request, &response, NULL);
         if (!ctrl.Failed()) {
             LOG(INFO) << "Received response from " << ctrl.remote_side()
