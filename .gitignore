@@ -1,0 +1,6 @@
+*.o
+.cache
+.xmake
+compile_commands.json
+build
+rpc_data
