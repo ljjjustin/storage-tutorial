@@ -15,15 +15,15 @@ target("proto_gen")
     add_files("src/*.proto", {proto_public = true})
 
 
-target("echo_server")
+target("http_server")
     set_kind("binary")
-    add_files("src/echo_server.cpp")
+    add_files("src/http_server.cpp")
     add_deps("proto_gen")
     add_packages("brpc", {public = true})
 
 
-target("echo_client")
+target("http_client")
     set_kind("binary")
-    add_files("src/echo_client.cpp")
+    add_files("src/http_client.cpp")
     add_deps("proto_gen")
     add_packages("brpc", {public = true})
